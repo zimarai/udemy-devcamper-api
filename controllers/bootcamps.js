@@ -37,10 +37,11 @@ exports.getBootcamp = async (req, res, next) => {
       data: bootcamp
     });
   } catch (err) {
-    res.status(400).json({
+    next(err);
+    /*res.status(400).json({
       success: false,
       message: `Error: ${err.message}`
-    })
+    })*/
   }
 };
 
